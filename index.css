@@ -1,0 +1,495 @@
+@font-face {
+	font-family: 'Candara';
+	src: url('/assets/candar-font/candara_font-webfont.woff2') format('woff2'),
+		url('/assets/candar-font/candara_font-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Candara';
+}
+
+.cyberpay__container {
+	width: 90vw;
+	margin: auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+
+.header__home {
+	text-decoration: none;
+}
+
+.header__home img {
+	height: 30px;
+}
+
+.header__cancel {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.header__cancel img {
+	height: 20px;
+}
+
+.payment__container {
+	width: 850px;
+	max-width: 100%;
+	margin: 20px auto;
+}
+
+.nav-tabs {
+	border-bottom: none;
+}
+
+.payment__header {
+	font-style: normal;
+	font-size: 17px;
+	font-weight: 700;
+	color: #181b24;
+	text-transform: capitalize;
+}
+
+.payment__type {
+	display: flex !important;
+
+	justify-content: space-between;
+	align-items: center;
+	border: none !important;
+	padding: 10px 20px 10px 0 !important;
+	margin-right: 5px !important;
+}
+
+.payment__type__icon {
+	height: 30px;
+	margin-right: 5px;
+}
+.payment__type__name {
+	width: 90%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 24px;
+
+	/* Dark blue */
+	color: #042f46;
+}
+
+.nav-tabs > li {
+	width: 14% !important;
+	margin-right: 20px;
+}
+
+.nav-tabs > li.active > a::after {
+	content: '';
+	position: absolute;
+	left: 33%;
+	bottom: 10px;
+	height: 3px;
+	width: 30%;
+	background-color: #042f46;
+}
+
+.payment__type__body {
+	margin: 30px 0;
+	border: 0.5px solid #388dcc;
+	/* Dashboard */
+
+	box-shadow: 0px 4px 16px rgba(11, 109, 158, 0.4);
+	min-height: 60vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.payment__information {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+.payment__information p {
+	font-size: 14px;
+	line-height: 24px;
+
+	font-weight: 700;
+}
+
+.payment__information p span {
+	color: rgba(56, 141, 204, 1);
+}
+
+.payment__form__container {
+	width: 550px;
+	max-width: 90%;
+	margin: auto;
+}
+
+.payment__form__container__small {
+	width: 320px;
+}
+
+.qrcode__container {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.qrcode__container img {
+	width: 70%;
+}
+
+.payment__form__container h3,
+.payment__form__container__small h3 {
+	margin: 30px 0;
+	color: #181b24;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.payment__form__container__small h3 {
+	font-size: 14px;
+}
+
+.payment__form__group {
+	margin: 10px 0;
+}
+
+.payment__form__group label {
+	font-weight: 500;
+	font-size: 13px;
+	color: #181b24;
+}
+
+.payment__form__control {
+	position: relative;
+}
+
+.payment__form__control input,
+.payment__form__control select {
+	width: 100%;
+	height: 50px;
+	padding: 10px 20px 10px 40px;
+	border: 1px solid #388dcc;
+	border-radius: 3px;
+	font-size: 13px;
+	color: #042f46;
+}
+.payment__form__control select,
+.payment__form__control.no__image input {
+	padding: 10px;
+}
+
+.payment__form__control input::placeholder {
+	color: #042f46;
+}
+
+.payment__form__control img {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 20px;
+}
+
+.payment__two__input__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.payment__two__input__container > div {
+	width: 47% !important;
+}
+
+.payment__form__button,
+.payment__cancel__button {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.payment__form__button button,
+.payment__cancel__button button {
+	width: 100%;
+	height: 50px;
+	border: none;
+	background: linear-gradient(180deg, #388dcc 0%, #042f46 100%);
+	border-radius: 4px;
+	color: white;
+	font-weight: 700;
+}
+
+.payment__cancel__button button {
+	background: white;
+	color: #388dcc;
+	border: 1px solid #388dcc;
+}
+
+.payment__footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10px;
+}
+
+.payment__footer p {
+	margin-top: 10px;
+	margin-left: 8px;
+	color: #181b24;
+}
+
+.payment__footer p span {
+	font-weight: bold;
+}
+
+.payment__transfer__information {
+	background: #ebf6fc;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.payment__transfer__information.ussd {
+	padding: 5px;
+	margin: 10px 0;
+}
+
+.cyberpay__error > img {
+	height: 70px;
+	padding: 10px 0;
+}
+
+.cyberpay__error > h3 {
+	margin: 5px 0;
+	font-size: 15px;
+}
+
+.cyberpay__reload__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.cyberpay__reload__container p {
+	margin: 0;
+	margin-left: 4px;
+	color: #042f46;
+}
+
+.cyberpay__error .payment__transfer__information.ussd {
+	border: 1px solid #388dcc;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.cyberpay__error .payment__transfer__information.ussd p {
+	font-weight: 700;
+	color: #042f46;
+}
+
+.payment__transfer__information h3 {
+	font-weight: 700;
+}
+
+.payment__transfer__account {
+	display: flex;
+	padding: 10px 0 !important;
+	cursor: pointer;
+}
+
+.payment__transfer__account p {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.payment__transfer__subtext p {
+	font-size: 13px;
+	color: #181b24;
+}
+
+.payment__transfer__subtext p span {
+	font-weight: 800;
+}
+
+.payment__transfer__information * {
+	margin: 0 !important;
+}
+
+.choose__another__bank {
+	display: block;
+	text-align: center;
+	position: relative;
+	color: #388dcc;
+}
+
+.choose__another__bank:hover {
+	text-decoration: none;
+}
+
+.choose__another__bank::after {
+	content: '';
+	height: 3px;
+	width: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	bottom: -3px;
+	background: #388dcc;
+}
+
+.cyberpay__loader,
+.cyberpay__success {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cyberpay__loader h3 {
+	margin-top: 30px !important;
+}
+
+.cyberpay__loader img,
+.cyberpay__success img {
+	height: 250px;
+}
+
+@media all and (max-width: 850px) {
+	.cyberpay__container {
+		width: 95vw;
+	}
+	.nav-tabs > li {
+		width: 14% !important;
+		margin-right: 3px;
+		margin-left: 3px;
+	}
+	.payment__type {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.payment__type__icon {
+		height: 20px;
+		margin-right: 3px;
+	}
+	.payment__type__name {
+		width: auto;
+		font-size: 8px;
+		color: #042f46;
+	}
+
+	.nav-tabs > li.active > a::after {
+		content: '';
+		position: absolute;
+		bottom: unset;
+		height: unset;
+		width: unset;
+		background-color: unset;
+	}
+	.nav-tabs > li.active::after {
+		content: '';
+		position: absolute;
+		left: 15%;
+		bottom: 10px;
+		height: 3px;
+		width: 50%;
+		background-color: #042f46;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.cyberpay__container {
+		width: 95vw;
+	}
+
+	.payment__header {
+		font-size: 14px;
+	}
+
+	.payment__form__container,
+	.payment__form__container__small {
+		width: 95vw;
+		padding-top: 10vh !important;
+	}
+
+	.nav-tabs > li.active::after {
+		left: 5%;
+	}
+
+	.payment__form__container__small {
+		width: 90vw;
+	}
+
+	.payment__form__container h3 {
+		color: #181b24;
+		font-size: 15px;
+	}
+
+	.payment__information {
+		position: absolute;
+		right: 30px;
+		top: 20px;
+	}
+	.payment__information p {
+		font-size: 12px;
+		line-height: 24px;
+
+		margin: 0;
+	}
+	.payment__form__group label {
+		font-weight: 500;
+		font-size: 12px;
+		color: #181b24;
+	}
+
+	.header__home img {
+		height: 25px;
+	}
+	.header__cancel img {
+		height: 15px;
+	}
+}
+
+@media all and (max-width: 350px) {
+	.payment__type__name {
+		font-size: 7px;
+	}
+	.payment__type__icon {
+		height: 15px;
+		margin-right: 3px;
+	}
+	.nav-tabs > li {
+		width: 14% !important;
+		margin-right: 3px;
+		margin-left: 3px;
+	}
+	.nav-tabs > li.active::after {
+		content: '';
+		position: absolute;
+		left: 2%;
+		bottom: 10px;
+		height: 3px;
+		width: 50%;
+		background-color: #042f46;
+	}
+
+	.payment__form__container {
+		padding-top: 15vh !important;
+	}
+}

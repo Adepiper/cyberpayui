@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+			integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,regular,500,600,700,800,900"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./index.css" />
+
+		<title>Cyberpay</title>
+	</head>
+	<body>
+		<div class="cyberpay__container">
+			<div class="header">
+				<a href="" class="header__home">
+					<img src="/assets/top_left.svg" alt="" />
+				</a>
+
+				<button class="header__cancel">
+					<img src="/assets/cancel.svg" alt="" />
+				</button>
+			</div>
+
+			<div class="payment__container">
+				<h2 class="payment__header">PAY WITH:</h2>
+				<div class="payment__body">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a
+								aria-controls="home"
+								href="#card"
+								role="tab"
+								data-toggle="tab"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/card.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name"> card </span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a
+								href="#bank"
+								aria-controls="bank"
+								role="tab"
+								data-toggle="tab"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/bank.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name">
+									bank
+								</span></a
+							>
+						</li>
+						<li role="presentation">
+							<a
+								aria-controls="transfer"
+								role="tab"
+								data-toggle="tab"
+								href="#transfer"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/transfer.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name">
+									transfer
+								</span></a
+							>
+						</li>
+						<li role="presentation">
+							<a
+								aria-controls="ussd"
+								role="tab"
+								data-toggle="tab"
+								href="#ussd"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/ussd.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name">
+									ussd
+								</span></a
+							>
+						</li>
+						<li role="presentation">
+							<a
+								aria-controls="qrcode"
+								role="tab"
+								data-toggle="tab"
+								href="#qrcode"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/qrcode.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name">
+									qrcode
+								</span></a
+							>
+						</li>
+						<li role="presentation">
+							<a
+								aria-controls="payattitude"
+								role="tab"
+								data-toggle="tab"
+								href="#payattitude"
+								class="payment__type"
+							>
+								<img
+									class="payment__type__icon"
+									src="/assets/phone.svg"
+									alt=""
+								/>
+
+								<span class="payment__type__name">
+									payattitude
+								</span></a
+							>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content mt-4 payment__type__body">
+						<div class="payment__information">
+							<p>adabayo@gmail.com</p>
+							<p>PAY <span>NGN 24,024.24</span></p>
+						</div>
+						<div
+							role="tabpanel"
+							class="tab-pane fade in active"
+							id="card"
+						>
+							<form class="payment__form__container">
+								<!-- card first flow -->
+								<h3>Enter your card details to pay</h3>
+								<div class="payment__form__group">
+									<label for=""> Card Number </label>
+
+									<div class="payment__form__control">
+										<img
+											src="/assets/card-icon.svg"
+											alt=""
+										/>
+										<input
+											type="text"
+											placeholder="0000 0000 0000 0000"
+										/>
+									</div>
+								</div>
+								<div class="payment__two__input__container">
+									<div
+										class="payment__two__input__form__group"
+									>
+										<div class="payment__form__group">
+											<label for=""> Valid Till </label>
+
+											<div class="payment__form__control">
+												<img
+													src="/assets/calendar-icon.svg"
+													alt=""
+												/>
+												<input
+													type="text"
+													placeholder="MM/YY"
+												/>
+											</div>
+										</div>
+									</div>
+									<div
+										class="payment__two__input__form__group"
+									>
+										<div class="payment__form__group">
+											<label for=""> CVV </label>
+
+											<div class="payment__form__control">
+												<img
+													src="/assets/padlock-icon.svg"
+													alt=""
+												/>
+												<input
+													type="text"
+													placeholder="123"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div>
+								<!-- <h3 class="text-center">
+									You will be redirected to your bank to
+									complete the transaction
+								</h3>
+								<div class="payment__form__button">
+									<button>CONTINUE</button>
+								</div>
+
+								<div class="payment__cancel__button">
+									<button>CANCEL</button>
+								</div> -->
+							</form>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="bank">
+							<form class="payment__form__container">
+								<h3>Choose bank to start payment</h3>
+								<div class="payment__form__group">
+									<label for=""> Bank Name </label>
+
+									<div class="payment__form__control">
+										<select name="" id="">
+											<option value="">select</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div>
+
+								<!-- <h3>Enter your Account Details</h3>
+								<div class="payment__form__group">
+									<label for=""> Bank Name </label>
+
+									<div class="payment__form__control">
+										<select name="" id="">
+											<option value="">select</option>
+										</select>
+									</div>
+								</div>
+								<div class="payment__form__group">
+									<label for=""> Account Number </label>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input
+											type="text"
+											placeholder="00000000"
+										/>
+									</div>
+								</div>
+								<div class="payment__form__group">
+									<label for=""> Account Name </label>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input type="text" placeholder="" />
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div>
+
+								<h3>AUTHENTICATION</h3>
+								<div class="payment__form__group">
+									<label for=""> BVN</label>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input type="text" placeholder="" />
+									</div>
+								</div>
+								<div class="payment__form__group">
+									<label for=""> Date of Birth </label>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input type="date" />
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div> -->
+							</form>
+
+							<!-- <form class="payment__form__container__small">
+								<h3>OTP VERIFICATION</h3>
+
+								<div class="payment__form__group">
+									<label for="">
+										Kindly enter the OTP sent to your mobile
+										phone</label
+									>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input
+											type="text"
+											class="text-center"
+										/>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>VERIFY</button>
+								</div>
+							</form> -->
+						</div>
+						<div
+							role="tabpanel"
+							class="tab-pane fade"
+							id="transfer"
+						>
+							<form class="payment__form__container">
+								<h3 class="text-center">
+									Transfer NGN 24,024.24 to CyberPay checkout
+								</h3>
+
+								<div class="payment__transfer__information">
+									<h3>Wema Bank</h3>
+									<div class="payment__transfer__account">
+										<p>0123467890</p>
+										<img
+											src="/assets/copy-icon.svg"
+											alt=""
+										/>
+									</div>
+
+									<div class="payment__transfer__subtext">
+										<p>
+											Use this account for this
+											transaction only.
+										</p>
+										<p>
+											Account expires in
+											<span>30 minutes</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>I’ve sent the money</button>
+								</div>
+							</form>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="ussd">
+							<form class="payment__form__container">
+								<!-- <h3>Choose bank to start payment</h3>
+								<div class="payment__form__group">
+									<label for=""> Bank Name </label>
+
+									<div class="payment__form__control">
+										<select name="" id="">
+											<option value="">Select</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div> -->
+
+								<h3 class="text-center">
+									Choose bank to start payment
+								</h3>
+								<div
+									class="payment__transfer__information ussd"
+								>
+									<div class="payment__transfer__account">
+										<p>*822*54*5061#</p>
+										<img
+											src="/assets/copy-icon.svg"
+											alt=""
+										/>
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>I’ve completed the payment</button>
+								</div>
+
+								<a class="choose__another__bank" href=""
+									>Choose another bank</a
+								>
+							</form>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="qrcode">
+							<form class="payment__form__container__small">
+								<h3 class="text-center">
+									Scan the QR Code below to complete the
+									payment
+								</h3>
+
+								<div class="qrcode__container">
+									<img
+										src="/assets/qrcode-image.svg"
+										alt=""
+									/>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div>
+							</form>
+						</div>
+						<div
+							role="tabpanel"
+							class="tab-pane fade"
+							id="payattitude"
+						>
+							<form class="payment__form__container">
+								<h3>
+									Input registered phone number to complete
+									transaction
+								</h3>
+								<div class="payment__form__group">
+									<label for="">Phone Number </label>
+
+									<div
+										class="payment__form__control no__image"
+									>
+										<input type="text" placeholder="+234" />
+									</div>
+								</div>
+
+								<div class="payment__form__button">
+									<button>Pay NGN 24,024.24</button>
+								</div>
+							</form>
+
+							<!-- <div
+								class="payment__form__container cyberpay__loader text-center"
+							>
+								<img src="/assets/loader.svg" alt="" />
+
+								<h3 class="mt-4">Processing...</h3>
+              </div> -->
+
+							<!-- <div
+								class="payment__form__container cyberpay__error text-center"
+							>
+								<img src="/assets/caution-icon.svg" alt="" />
+
+								<h3>
+									An error occurred while processing your
+									request
+								</h3>
+
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>Try another bank account</p>
+								</a>
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>Try paying with cardt</p>
+								</a>
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>TTry paying with transfer</p>
+								</a>
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>Try paying with USSD</p>
+								</a>
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>Try paying with QR Code</p>
+								</a>
+								<a
+									href=""
+									class="payment__transfer__information ussd"
+								>
+									<p>Try paying with Payattitude</p>
+								</a>
+
+								<div class="cyberpay__reload__container">
+									<img
+										src="/assets/refresh-icon.svg"
+										alt=""
+									/>
+									<p>Start over with the same bank account</p>
+								</div>
+							</div> -->
+
+							<!-- <div
+								class="payment__form__container cyberpay__success text-center"
+							>
+								<h3 class="mt-4">Transaction Successful!</h3>
+								<img src="/assets/success-image.svg" alt="" />
+							</div> -->
+						</div>
+					</div>
+
+					<div class="payment__footer">
+						<img src="/assets/footer-padlock.svg" alt="" />
+						<p>
+							Powered by
+							<span> CyberPay </span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+			integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
